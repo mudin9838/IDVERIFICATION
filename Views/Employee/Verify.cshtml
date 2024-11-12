@@ -1,0 +1,22 @@
+﻿@model IDVERIFICATION.Models.Employee
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Employee Details</h2>
+    <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">@Model.Name</h5>
+        </div>
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Position: @Model.Position</h6>
+            <p class="card-text"><strong>Tax Center:</strong> @Model.TaxCenter</p>
+            <p class="card-text"><strong>Employee ID:</strong> @Model.Id</p>
+            <div class="text-center">
+                <img src="@Model.QRCodeUrl" alt="QR Code" class="img-fluid" style="max-width: 300px;" />
+            </div>
+        </div>
+    </div>
+</div>
